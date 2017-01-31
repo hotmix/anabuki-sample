@@ -160,9 +160,7 @@
 					$('.nav li').removeClass('active');
 					$(this).addClass('active');
 				});
-			});
 
-			function get_data(){
 				$('.ajax-btn').click(function(){
 					$('#result').html("通信中・・・");
 					$.ajax({
@@ -181,7 +179,8 @@
 				    }
 				  })
 				});
-			}
+			});
+
 		</script>
 	</body>
 </html>

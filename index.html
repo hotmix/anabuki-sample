@@ -53,6 +53,8 @@
 
 		<div class="container">
 			<div id="map" height="300px"></div>
+			<div id="result"></div>
+			<button class="ajax-btn　btn-primary">通信</button>
 			<div class="page-header">
 				<h1>サンプル　　<small>サブ・テキスト</small></h1>
 			</div>
@@ -159,6 +161,26 @@
 					$(this).addClass('active');
 				});
 			});
+
+			function get_data(){
+				$('.ajax-btn').click({
+					$.ajax({
+				    url: 'ajax.html',
+				    type: 'GET',
+				    dataType: 'html',
+				    // フォーム要素の内容をハッシュ形式に変換
+				    timeout: 5000,
+				    success: function(data){
+				      // 通信成功時の処理を記述
+							$('#result').html(data);
+				    },
+				    error: function(){
+				      // 通信失敗時の処理を記述
+							$('#result').html("通信エラー");
+				    }
+				  })
+				});
+			}
 		</script>
 	</body>
 </html>

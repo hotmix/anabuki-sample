@@ -54,7 +54,7 @@
 		<div class="container">
 			<div id="map" height="300px"></div>
 			<div id="result"></div>
-			<button class="ajax-btn　btn-primary">通信</button>
+			<button class="ajax-btn btn btn-primary">通信</button>
 			<div class="page-header">
 				<h1>サンプル　　<small>サブ・テキスト</small></h1>
 			</div>
@@ -164,6 +164,7 @@
 
 			function get_data(){
 				$('.ajax-btn').click(function(){
+					$('#result').html("通信中・・・");
 					$.ajax({
 				    url: 'ajax.html',
 				    type: 'GET',

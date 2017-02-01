@@ -169,6 +169,7 @@
 				    url: 'ajax.html',
 				    type: 'GET',
 				    timeout: 5000,
+						cache: false,
 				    success: function(data){
 				      // 通信成功時の処理を記述
 							$('#result').html(data);

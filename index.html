@@ -165,8 +165,9 @@
 
 				$('.ajax-btn').click(function(){
 					$('#result').html("通信中・・・");
+					var zipcode = 7793125;
 					$.ajax({
-				    url: 'https://aed.azure-mobile.net/api/AEDSearch?lat=35.96&lng=136.185&r=300',
+				    url: 'https://api.zipaddress.net/?zipcode=' + zipcode,
 				    type: 'GET',
 				    timeout: 5000,
 						cache: false,
